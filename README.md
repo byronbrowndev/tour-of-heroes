@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Deployment 
+
+### Using GH-Pages
+I followed [Angular.io's deployment documentation](https://angular.io/guide/deployment#deploy-to-github-pages) with a slight modification
+
+```ng build --prod --output-path docs --base-href "https://byronbrowndev.github.io/tour-of-heroes/"```
+
+I used the repo url as the base-href instead of what they recommended. All the other instruction in that section were vebatim
+
+#### Issues
+I tried to use [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages#usage) to no avail. I ran the build with the prescribed command ```ng build --prod --base-href "https://byronbrowndev.github.io/tour-of-heroes/"``` then. I ran the ngh command ```angular-cli-ghpages --dir=dist/tour-of-heroes``` also the variant ```ngh --dir=dist/tour-of-heroes``` only to recieve the same error each time.
+
+![](./readme-assets/error.jpg)
